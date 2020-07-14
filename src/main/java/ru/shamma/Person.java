@@ -1,16 +1,16 @@
 package ru.shamma;
 
 public class Person {
-    String firstName;
-    String lastName;
-    String middleName;
-    String country;
-    String address;
-    String phone;
-    int age;
-    String gender;
+    private String firstName;
+    private String lastName;
+    private String middleName;
+    private String country;
+    private String address;
+    private String phone;
+    private int age;
+    private String gender;
 
-    public Person(Builder builder) {
+    private Person(Builder builder) {
         this.firstName = builder.firstName;
         this.lastName = builder.lastName;
         this.middleName = builder.middleName;
