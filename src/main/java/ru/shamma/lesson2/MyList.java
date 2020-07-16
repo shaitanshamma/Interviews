@@ -1,15 +1,15 @@
 package ru.shamma.lesson2;
 
 public interface MyList<T> {
-    void add(T t);
+    void add(T obj);
 
-    void delete(T t);
+    void delete(T obj);
 
     void delete(int index);
 
-    boolean contains(T t);
+    boolean contains(T obj);
 
     void info();
 
-    void add(T s, int i);
+    void add(T obj, int index);
 }

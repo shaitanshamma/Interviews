@@ -86,10 +86,6 @@ public class MyArrayList<T> implements MyList<T> {
     }
 
     public void info() {
-        Object[] objects = new Object[data.length];
-        for (int i = 0; i < data.length; i++) {
-            objects[i] = data[i];
-        }
-        System.out.println(Arrays.toString(objects));
+        System.out.println(Arrays.toString(data));
     }
 }
