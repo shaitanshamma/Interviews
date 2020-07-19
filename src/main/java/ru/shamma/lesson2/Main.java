@@ -13,5 +13,14 @@ public class Main {
         System.out.println(a.contains("5"));
         a.delete("3");
         a.info();
+
+        MyLinkedList<String> linkedList= new SimpleLinkedList<>();
+        linkedList.insertFirst("1");
+        linkedList.insertFirst("2");
+        linkedList.insertFirst("3");
+        linkedList.insertFirst("4");
+        linkedList.getFirstValue();
+        linkedList.display();
+        System.out.println(linkedList.contains("2"));
     }
 }
