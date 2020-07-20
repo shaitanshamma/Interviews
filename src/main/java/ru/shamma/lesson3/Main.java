@@ -2,7 +2,7 @@ package ru.shamma.lesson3;
 
 public class Main {
     private final Object monitor = new Object();
-    private String string = "ping";
+    private String string = "ping!";
 
     public static void main(String[] args) {
         Main main = new Main();
@@ -16,12 +16,12 @@ public class Main {
         synchronized (monitor) {
             for (int i = 0; i < 10; i++) {
                 try {
-                    while (!string.equals("ping")) {
+                    while (!string.equals("ping!")) {
                         monitor.wait();
                     }
                     Thread.sleep(300);
-                    System.out.println("ping");
-                    string="pong";
+                    System.out.println("ping!");
+                    string="pong!";
                     monitor.notify();
 
                 } catch (InterruptedException e) {
@@ -35,12 +35,12 @@ public class Main {
         synchronized (monitor) {
             for (int i = 0; i < 10; i++) {
                 try {
-                    while (!string.equals("pong")) {
+                    while (!string.equals("pong!")) {
                         monitor.wait();
                     }
                     Thread.sleep(300);
-                    System.out.println("pong");
-                    string="ping";
+                    System.out.println("pong!");
+                    string="ping!";
                     monitor.notify();
                 } catch (InterruptedException e) {
                     e.printStackTrace();
